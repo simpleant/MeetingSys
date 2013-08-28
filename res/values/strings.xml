@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MeetingSys</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="notice">系统描述 \n 平板会系统XXXXXXXXXXXXXX\n</string>
+    <string name="version">v1.0.1</string>
+
+</resources>
