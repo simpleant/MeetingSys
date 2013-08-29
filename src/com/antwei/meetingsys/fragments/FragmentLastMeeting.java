@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-public class FragmentMeeting extends ListFragment {
+public class FragmentLastMeeting extends ListFragment {
 
 	private String[] meetingNotice = {"XXX会议","XXX会议","XXX会议","XXX会议","XXX会议","XXX会议"};
 	@Override
