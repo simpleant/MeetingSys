@@ -24,6 +24,7 @@ public class FragmentLogin extends Fragment implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		
+		
 	}
 	
 	
