@@ -23,7 +23,14 @@ public class FragmentLogin extends Fragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		
+		sweitch(v.getId()){
+			case 1:
+				break;
+				case 2:
+					break;
+					default :
+					break;
+		}
 	}
 	
 	
