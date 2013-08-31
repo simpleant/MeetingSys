@@ -16,23 +16,20 @@ public class FragmentLogin extends Fragment implements OnClickListener {
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		return inflater.inflate(R.layout.layout_login, container, false);
-		
+
 	}
-	
-	
+
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		switch(v.getId()){
-			case 1:
-				break;
-				case 2:
-					break;
-					default :
-					break;
+		switch (v.getId()) {
+		case 1:
+			break;
+		case 2:
+			break;
+		default:
+			break;
 		}
 	}
-	
-	
 
 }
