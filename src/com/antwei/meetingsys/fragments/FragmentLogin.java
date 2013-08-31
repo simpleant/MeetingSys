@@ -31,6 +31,7 @@ public class FragmentLogin extends Fragment implements OnClickListener {
 		activity = getActivity();
 		context = activity.getBaseContext();
 	}
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -38,9 +39,9 @@ public class FragmentLogin extends Fragment implements OnClickListener {
 		View myView = inflater.inflate(R.layout.layout_login, container, false);
 		etName = (EditText) myView.findViewById(R.id.et_name);
 		etPass = (EditText) myView.findViewById(R.id.et_pass);
-		btnLogin = (Button)myView.findViewById(R.id.btn_login);
-		btnQuit = (Button)myView.findViewById(R.id.btn_quit);
-		btnLogin.setOnClickListener(this);	
+		btnLogin = (Button) myView.findViewById(R.id.btn_login);
+		btnQuit = (Button) myView.findViewById(R.id.btn_quit);
+		btnLogin.setOnClickListener(this);
 		btnQuit.setOnClickListener(this);
 		return myView;
 
@@ -51,9 +52,9 @@ public class FragmentLogin extends Fragment implements OnClickListener {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.btn_login:
-			Toast.makeText(context, "btnLogin be thouched", Toast.LENGTH_SHORT).show();
-			intent = new Intent(context, ListMeetingActivity.class);
-			startActivity(intent);
+//			Toast.makeText(context, "btnLogin be thouched", Toast.LENGTH_SHORT)
+//					.show();
+			myCheck();
 			break;
 		case R.id.btn_quit:
 			getActivity().finish();
@@ -61,6 +62,13 @@ public class FragmentLogin extends Fragment implements OnClickListener {
 		default:
 			break;
 		}
+	}
+
+	private void myCheck() {
+		// TODO Auto-generated method stub
+
+		intent = new Intent(context, ListMeetingActivity.class);
+		startActivity(intent);
 	}
 
 }

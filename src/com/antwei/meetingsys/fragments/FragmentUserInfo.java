@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 public class FragmentUserInfo extends Fragment implements OnClickListener {
 
-	private EditText etName, etPass;
 	private Button btnLogin, btnQuit;
 	private Context context;
 	private Activity activity;
@@ -36,12 +35,9 @@ public class FragmentUserInfo extends Fragment implements OnClickListener {
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		View myView = inflater.inflate(R.layout.layout_login, container, false);
-		etName = (EditText) myView.findViewById(R.id.et_name);
-		etPass = (EditText) myView.findViewById(R.id.et_pass);
+		
 		btnLogin = (Button)myView.findViewById(R.id.btn_login);
-		btnQuit = (Button)myView.findViewById(R.id.btn_quit);
 		btnLogin.setOnClickListener(this);	
-		btnQuit.setOnClickListener(this);
 		return myView;
 
 	}
@@ -49,18 +45,9 @@ public class FragmentUserInfo extends Fragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		switch (v.getId()) {
-		case R.id.btn_login:
 			Toast.makeText(context, "btnLogin be thouched", Toast.LENGTH_SHORT).show();
 			intent = new Intent(context, ListMeetingActivity.class);
 			startActivity(intent);
-			break;
-		case R.id.btn_quit:
-			getActivity().finish();
-			break;
-		default:
-			break;
-		}
 	}
 
 }

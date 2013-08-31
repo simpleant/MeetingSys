@@ -2,7 +2,9 @@ package com.antwei.meetingsys.fragments;
 
 import com.antwei.meetingsys.R;
 
+import android.app.Activity;
 import android.app.ListFragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,26 +14,29 @@ import android.widget.ListView;
 
 public class FragmentMeetingNotice extends ListFragment {
 
-	private String[] meetingNotice = { "XXX会议", "XXX会议", "XXX会议", "XXX会议",
-			"XXX会议", "XXX会议" };
+	private String[] meetingNotice = { "XXX浼氳", "XXX浼氳", "XXX浼氳", "XXX浼氳",
+			"XXX浼氳", "XXX浼氳", "XXX浼氳", "XXX浼氳", "XXX浼氳", };
 
+	private Activity activity;
+	private Context context;
 	private ArrayAdapter<String> noticeAdapter;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-
-		noticeAdapter = new ArrayAdapter<String>(
-				getActivity().getBaseContext(),
-				android.R.layout.simple_list_item_1, meetingNotice);
-
+		this.activity = getActivity();
+		this.context = activity.getBaseContext();
+		// noticeAdapter = new ArrayAdapter<String>(context,
+		// android.R.layout.simple_list_item_1, meetingNotice);
 	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+		noticeAdapter = new ArrayAdapter<String>(context,
+				android.R.layout.simple_list_item_1, meetingNotice);
 		return inflater.inflate(R.layout.meeting_notice, container, false);
 	}
 

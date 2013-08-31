@@ -1,10 +1,11 @@
 package com.antwei.meetingsys;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.WindowManager;
 
-public class ListMeetingActivity extends App {
+public class App extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -13,9 +14,12 @@ public class ListMeetingActivity extends App {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-		setContentView(R.layout.activity_meetinglist);
-
 	}
 	
-
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// TODO Auto-generated method stub
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
 }
