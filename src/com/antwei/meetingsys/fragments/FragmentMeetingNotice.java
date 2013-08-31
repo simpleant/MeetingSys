@@ -21,8 +21,10 @@ public class FragmentMeetingNotice extends ListFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		
-		noticeAdapter = new ArrayAdapter<String>(getActivity().getBaseContext(),R.layout.layout_notice, meetingNotice);
+
+		noticeAdapter = new ArrayAdapter<String>(
+				getActivity().getBaseContext(),
+				android.R.layout.simple_list_item_1, meetingNotice);
 
 	}
 
@@ -30,7 +32,7 @@ public class FragmentMeetingNotice extends ListFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		return inflater.inflate(R.layout.meeting_notice, container,false);
+		return inflater.inflate(R.layout.meeting_notice, container, false);
 	}
 
 	@Override
