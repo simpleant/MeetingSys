@@ -1,10 +1,12 @@
 package com.antwei.meetingsys.fragments;
 
+import com.antwei.meetingsys.ListMeetingActivity;
 import com.antwei.meetingsys.R;
 
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +22,7 @@ public class FragmentLogin extends Fragment implements OnClickListener {
 	private Button btnLogin, btnQuit;
 	private Context context;
 	private Activity activity;
+	private Intent intent;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,8 @@ public class FragmentLogin extends Fragment implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.btn_login:
 			Toast.makeText(context, "btnLogin be thouched", Toast.LENGTH_SHORT).show();
+			intent = new Intent(context, ListMeetingActivity.class);
+			startActivity(intent);
 			break;
 		case R.id.btn_quit:
 			getActivity().finish();
