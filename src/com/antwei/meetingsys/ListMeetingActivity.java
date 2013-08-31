@@ -3,11 +3,14 @@ package com.antwei.meetingsys;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class Meeting extends Activity {
+public class ListMeetingActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.activity_meetinglist);
+		
 	}
 }

@@ -17,18 +17,17 @@
             android:id="@+id/fragment_meetingtost"
             android:name="com.antwei.meetingsys.fragments.FragmentLastMeeting"
             android:layout_width="match_parent"
-            android:layout_margin="15dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_marginBottom="10dp"
+            android:layout_weight="2" />
 
         <fragment
             android:id="@+id/fragment_userinfo"
             android:name="com.antwei.meetingsys.fragments.FragmentLastMeeting"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="15dp"
             android:layout_toEndOf="@id/fragment_meetingtost"
-            android:layout_weight="2" />
+            android:layout_weight="3" />
         
     </LinearLayout>
 
@@ -37,10 +36,7 @@
         android:name="com.antwei.meetingsys.fragments.FragmentLastMeeting"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_weight="2" />
 
 </LinearLayout>
