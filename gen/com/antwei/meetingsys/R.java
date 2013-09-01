@@ -27,7 +27,7 @@ public final class R {
         public static final int wallpaper=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000b;
+        public static final int action_settings=0x7f08000f;
         public static final int btn_login=0x7f080006;
         public static final int btn_quit=0x7f080007;
         public static final int et_name=0x7f080004;
@@ -36,9 +36,13 @@ public final class R {
         public static final int fragment_login=0x7f080000;
         public static final int fragment_meetingtost=0x7f080001;
         public static final int fragment_userinfo=0x7f080002;
+        public static final int imageButton1=0x7f08000e;
+        public static final int iv_userhead=0x7f08000c;
         public static final int tv_date=0x7f080009;
         public static final int tv_meeting=0x7f080008;
+        public static final int tv_notice=0x7f08000d;
         public static final int tv_room=0x7f08000a;
+        public static final int tv_username=0x7f08000b;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
