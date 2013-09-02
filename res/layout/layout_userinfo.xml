@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#7f7f7f7f"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -9,38 +9,66 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin" >
 
-    <RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal" >
 
-        <TextView
-            android:id="@+id/tv_username"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_weight="2"
-            android:text="Antwei" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:text="Antwei 你好" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="bottom"
+                android:text="关于XXXXX的会议即将召开，请签到" />
+
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/iv_userhead"
-            android:layout_width="0dp"
+            android:layout_width="72dp"
+            android:layout_height="98dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/user_uncheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_checkin"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_toRightOf="@id/tv_username"
-            android:layout_weight="3"
-            android:src="@drawable/icon_lunch" />
-    </RelativeLayout>
+            android:layout_marginRight="5dp"
+            android:gravity="left"
+            android:text="签到" />
 
-    <TextView
-        android:id="@+id/tv_notice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
-        android:text="TextView" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="会议时间：9：00--11：00" />
 
-    <ImageButton
-        android:id="@+id/imageButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
-        android:src="@drawable/ic_launcher" />
+    </LinearLayout>
 
 </LinearLayout>

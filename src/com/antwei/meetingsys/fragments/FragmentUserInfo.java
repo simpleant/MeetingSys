@@ -1,6 +1,5 @@
 package com.antwei.meetingsys.fragments;
 
-import com.antwei.meetingsys.ListMeetingActivity;
 import com.antwei.meetingsys.R;
 
 import android.app.Activity;
@@ -13,16 +12,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class FragmentUserInfo extends Fragment implements OnClickListener {
 
-	private Button btnLogin, btnQuit;
 	private Context context;
 	private Activity activity;
 	private Intent intent;
-
+	private TextView tvUserName, tvMeeting;
+	private Button ibCheckin;
+	private ImageView ivUserHead;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -34,10 +35,12 @@ public class FragmentUserInfo extends Fragment implements OnClickListener {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View myView = inflater.inflate(R.layout.layout_login, container, false);
-		
-		btnLogin = (Button)myView.findViewById(R.id.btn_login);
-		btnLogin.setOnClickListener(this);	
+		View myView = inflater.inflate(R.layout.layout_userinfo, container, false);
+		tvUserName = (TextView)myView.findViewById(R.id.tv_username);
+		tvMeeting = (TextView)myView.findViewById(R.id.tv_meeting);
+		ibCheckin = (Button)myView.findViewById(R.id.btn_checkin);
+		ivUserHead = (ImageView)myView.findViewById(R.id.iv_userhead);
+		ibCheckin.setOnClickListener(this);
 		return myView;
 
 	}
@@ -46,8 +49,7 @@ public class FragmentUserInfo extends Fragment implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 			Toast.makeText(context, "btnLogin be thouched", Toast.LENGTH_SHORT).show();
-			intent = new Intent(context, ListMeetingActivity.class);
-			startActivity(intent);
+			
 	}
 
 }

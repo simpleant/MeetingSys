@@ -24,7 +24,7 @@
 
         <fragment
             android:id="@+id/fragment_userinfo"
-            android:name="com.antwei.meetingsys.fragments.FragmentLogin"
+            android:name="com.antwei.meetingsys.fragments.FragmentUserInfo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_toEndOf="@id/fragment_meetingtost"
@@ -38,7 +38,7 @@
         android:name="com.antwei.meetingsys.fragments.FragmentLogin"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="20dp"
         android:layout_weight="2" />
 
 </LinearLayout>
