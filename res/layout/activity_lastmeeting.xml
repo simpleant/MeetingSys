@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#7f7f7f7f"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_lastmeeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textSize="20sp"
+        android:textColor="#9f000000"
+        android:gravity="center_horizontal"
+        android:text="会议历史" />
+
+    <GridView
+        android:id="@+id/gv_lastmeeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:numColumns="3" />
+
+</LinearLayout>

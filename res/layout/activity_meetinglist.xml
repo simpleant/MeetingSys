@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="horizontal"
     android:background="@drawable/wallpaper"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,23 +10,23 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="fill_parent"
         android:layout_weight="1"
         android:orientation="vertical" >
 
         <fragment
             android:id="@+id/fragment_meetingtost"
             android:name="com.antwei.meetingsys.fragments.FragmentMeetingNotice"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
             android:layout_marginBottom="10dp"
-            android:layout_weight="2" />
+            android:layout_weight="4" />
 
         <fragment
             android:id="@+id/fragment_userinfo"
             android:name="com.antwei.meetingsys.fragments.FragmentUserInfo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
             android:layout_toEndOf="@id/fragment_meetingtost"
             android:layout_weight="3" />
         
@@ -35,9 +35,9 @@
  
     <fragment
         android:id="@+id/fragment_lastMeeting"
-        android:name="com.antwei.meetingsys.fragments.FragmentLogin"
+        android:name="com.antwei.meetingsys.fragments.FragmentLastMeeting"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="fill_parent"
         android:layout_marginLeft="20dp"
         android:layout_weight="2" />
 

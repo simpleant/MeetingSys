@@ -22,8 +22,7 @@ public class FragmentUserInfo extends Fragment implements OnClickListener {
 	private Activity activity;
 	private Intent intent;
 	private TextView tvUserName, tvMeeting;
-	private Button ibCheckin;
-	private ImageView ivUserHead;
+	private ImageView ivCheckin;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -38,9 +37,8 @@ public class FragmentUserInfo extends Fragment implements OnClickListener {
 		View myView = inflater.inflate(R.layout.layout_userinfo, container, false);
 		tvUserName = (TextView)myView.findViewById(R.id.tv_username);
 		tvMeeting = (TextView)myView.findViewById(R.id.tv_meeting);
-		ibCheckin = (Button)myView.findViewById(R.id.btn_checkin);
-		ivUserHead = (ImageView)myView.findViewById(R.id.iv_userhead);
-		ibCheckin.setOnClickListener(this);
+		ivCheckin = (ImageView)myView.findViewById(R.id.iv_checkin);
+		ivCheckin.setOnClickListener(this);
 		return myView;
 
 	}

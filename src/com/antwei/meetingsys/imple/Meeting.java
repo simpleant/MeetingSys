@@ -20,43 +20,43 @@ public class Meeting {
 		this.intro = intro;
 	}
 
-	private String getName() {
+	public String getName() {
 		return name;
 	}
 
-	private void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
-	private long getDate() {
+	public long getDate() {
 		return date;
 	}
 
-	private void setDate(long date) {
+	public void setDate(long date) {
 		this.date = date;
 	}
 
-	private Doc getDoc() {
+	public Doc getDoc() {
 		return doc;
 	}
 
-	private void setDoc(Doc doc) {
+	public void setDoc(Doc doc) {
 		this.doc = doc;
 	}
 
-	private String getIntro() {
+	public String getIntro() {
 		return intro;
 	}
 
-	private void setIntro(String intro) {
+	public void setIntro(String intro) {
 		this.intro = intro;
 	}
-	
-	private int getPermission(){
+
+	public int getPermission() {
 		return permission;
 	}
-	
-	private void setPermission(int permission){
+
+	public void setPermission(int permission) {
 		this.permission = permission;
 	}
 
