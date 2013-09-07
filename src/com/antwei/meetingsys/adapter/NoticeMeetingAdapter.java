@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.antwei.meetingsys.R;
 import com.antwei.meetingsys.imple.Meeting;
+import com.antwei.meetingsys.util.myUtils;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,16 +14,16 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class LastMeetingAdapter extends BaseAdapter {
+public class NoticeMeetingAdapter extends BaseAdapter {
 
 	private List<Meeting> coll;
 	private Context context;
 	private LayoutInflater mInflater;
 
-	public LastMeetingAdapter() {
+	public NoticeMeetingAdapter() {
 	}
 
-	public LastMeetingAdapter(List<Meeting> coll, Context context,
+	public NoticeMeetingAdapter(List<Meeting> coll, Context context,
 			LayoutInflater mInflater) {
 		this.coll = coll;
 		this.context = context;
@@ -55,20 +56,24 @@ public class LastMeetingAdapter extends BaseAdapter {
 		if (convertView == null) {
 			convertView = mInflater.inflate(R.layout.lastmeetingcontent,
 					null);
-			viewHolder.tvMeeting = (TextView)convertView.findViewById(R.id.tv_meeting);
-			viewHolder.ivMeeting = (ImageView)convertView.findViewById(R.id.iv_meeting);
+			viewHolder.tvName = (TextView)convertView.findViewById(R.id.tv_noticename);
+			viewHolder.tvRoom = (TextView)convertView.findViewById(R.id.tv_noticroom);
+			viewHolder.tvDate = (TextView)convertView.findViewById(R.id.tv_noticedate);
 			convertView.setTag(viewHolder);
 		}else{
 			viewHolder = (ViewHolder)convertView.getTag();
 		}
-		viewHolder.ivMeeting.setImageResource(R.drawable.icon_lunch);
-		viewHolder.tvMeeting.setText(meeting.getName());
+		viewHolder.tvDate.setText(myUtils.dateToString(meeting.getDate()));
+		viewHolder.tvName.setText(meeting.getName());
+		viewHolder.tvRoom.setText(meeting.getAddress());
 		return convertView;
 	}
 
 	static class ViewHolder {
-		public TextView tvMeeting;
-		public ImageView ivMeeting;
+		public TextView tvName;
+		public TextView tvDate;
+		public TextView tvRoom;
 	}
+	
 
 }

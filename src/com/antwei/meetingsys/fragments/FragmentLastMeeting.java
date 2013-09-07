@@ -52,7 +52,7 @@ public class FragmentLastMeeting extends Fragment implements
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		this.mInflater = inflater;
-		View myView = inflater.inflate(R.layout.activity_lastmeeting,
+		View myView = inflater.inflate(R.layout.layout_lastmeeting,
 				container, false);
 		gvMeeting = (GridView) myView.findViewById(R.id.gv_lastmeeting);
 		tvTitle = (TextView) myView.findViewById(R.id.tv_lastmeeting);

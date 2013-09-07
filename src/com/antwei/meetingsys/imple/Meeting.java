@@ -7,17 +7,19 @@ public class Meeting {
 	private Doc doc;
 	private String intro;
 	private int permission;
+	private String address;
 
 	public Meeting() {
 
 	}
 
-	public Meeting(String name, long date, Doc doc, String intro) {
+	public Meeting(String name, long date, Doc doc, String intro, String address) {
 		super();
 		this.name = name;
 		this.date = date;
 		this.doc = doc;
 		this.intro = intro;
+		this.address = address;
 	}
 
 	public String getName() {
@@ -58,6 +60,14 @@ public class Meeting {
 
 	public void setPermission(int permission) {
 		this.permission = permission;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 }

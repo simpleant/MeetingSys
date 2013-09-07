@@ -1,6 +1,10 @@
 package com.antwei.meetingsys.fragments;
 
+import java.util.ArrayList;
+
 import com.antwei.meetingsys.R;
+import com.antwei.meetingsys.adapter.NoticeMeetingAdapter;
+import com.antwei.meetingsys.imple.Meeting;
 
 import android.app.Activity;
 import android.app.ListFragment;
@@ -19,25 +23,36 @@ public class FragmentMeetingNotice extends ListFragment {
 
 	private Activity activity;
 	private Context context;
-	private ArrayAdapter<String> noticeAdapter;
-
+	private NoticeMeetingAdapter noticeAdapter;
+	private ArrayList<Meeting>meetings;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		this.activity = getActivity();
 		this.context = activity.getBaseContext();
-		// noticeAdapter = new ArrayAdapter<String>(context,
-		// android.R.layout.simple_list_item_1, meetingNotice);
+		initDate();
+	}
+
+	private void initDate() {
+		// TODO Auto-generated method stub
+		meetings = new ArrayList<Meeting>();
+		Meeting meeting = null;
+		for(int i=0;i<meetingNotice.length;i++){
+			meeting = new Meeting();
+			meeting.setName("全国人大常委会第"+i+"次会议");
+			meeting.setAddress("第"+i+"会议室");
+			meeting.setDate(System.nanoTime());
+		}
+		meetings.add(meeting);
 	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		noticeAdapter = new ArrayAdapter<String>(context,
-				android.R.layout.simple_list_item_1, meetingNotice);
-		return inflater.inflate(R.layout.meeting_notice, container, false);
+		View noticeView = inflater.inflate(R.layout.layout_notice, container, false);
+		return  noticeView;
 	}
 
 	@Override
