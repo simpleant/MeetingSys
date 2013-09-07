@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class FragmentMeetingNotice extends ListFragment {
 
@@ -32,19 +33,21 @@ public class FragmentMeetingNotice extends ListFragment {
 		this.activity = getActivity();
 		this.context = activity.getBaseContext();
 		initDate();
+		noticeAdapter = new NoticeMeetingAdapter(meetings, context);
+		
 	}
 
 	private void initDate() {
 		// TODO Auto-generated method stub
 		meetings = new ArrayList<Meeting>();
-		Meeting meeting = null;
 		for(int i=0;i<meetingNotice.length;i++){
-			meeting = new Meeting();
+			Meeting meeting = new Meeting();
 			meeting.setName("全国人大常委会第"+i+"次会议");
 			meeting.setAddress("第"+i+"会议室");
-			meeting.setDate(System.nanoTime());
+			meeting.setDate(System.currentTimeMillis());
+			meetings.add(meeting);
 		}
-		meetings.add(meeting);
+		
 	}
 
 	@Override
@@ -65,6 +68,6 @@ public class FragmentMeetingNotice extends ListFragment {
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
 		// TODO Auto-generated method stub
-		super.onListItemClick(l, v, position, id);
+		Toast.makeText(context, l.getItemAtPosition(position).toString() , Toast.LENGTH_SHORT).show();
 	}
 }

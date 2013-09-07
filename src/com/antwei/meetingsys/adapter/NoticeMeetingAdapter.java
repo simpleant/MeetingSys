@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.antwei.meetingsys.R;
 import com.antwei.meetingsys.imple.Meeting;
-import com.antwei.meetingsys.util.myUtils;
+import com.antwei.meetingsys.util.MyUtils;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -23,11 +23,10 @@ public class NoticeMeetingAdapter extends BaseAdapter {
 	public NoticeMeetingAdapter() {
 	}
 
-	public NoticeMeetingAdapter(List<Meeting> coll, Context context,
-			LayoutInflater mInflater) {
+	public NoticeMeetingAdapter(List<Meeting> coll, Context context) {
 		this.coll = coll;
 		this.context = context;
-		this.mInflater = mInflater;
+		this.mInflater = LayoutInflater.from(context);;
 	}
 
 	@Override
@@ -54,26 +53,23 @@ public class NoticeMeetingAdapter extends BaseAdapter {
 		Meeting meeting = coll.get(position);
 		ViewHolder viewHolder = new ViewHolder();
 		if (convertView == null) {
-			convertView = mInflater.inflate(R.layout.lastmeetingcontent,
-					null);
-			viewHolder.tvName = (TextView)convertView.findViewById(R.id.tv_noticename);
-			viewHolder.tvRoom = (TextView)convertView.findViewById(R.id.tv_noticroom);
-			viewHolder.tvDate = (TextView)convertView.findViewById(R.id.tv_noticedate);
+			convertView = mInflater.inflate(R.layout.notice_content, null);
+			viewHolder.tvName = (TextView) convertView
+					.findViewById(R.id.tv_noticename);
+			viewHolder.tvDate = (TextView) convertView
+					.findViewById(R.id.tv_noticedate);
 			convertView.setTag(viewHolder);
-		}else{
-			viewHolder = (ViewHolder)convertView.getTag();
+		} else {
+			viewHolder = (ViewHolder) convertView.getTag();
 		}
-		viewHolder.tvDate.setText(myUtils.dateToString(meeting.getDate()));
+		viewHolder.tvDate.setText(MyUtils.dateToString(meeting.getDate()));
 		viewHolder.tvName.setText(meeting.getName());
-		viewHolder.tvRoom.setText(meeting.getAddress());
 		return convertView;
 	}
 
 	static class ViewHolder {
 		public TextView tvName;
 		public TextView tvDate;
-		public TextView tvRoom;
 	}
-	
 
 }

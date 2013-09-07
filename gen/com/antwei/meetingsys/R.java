@@ -43,11 +43,11 @@ public final class R {
         public static final int iv_checkin=0x7f08000e;
         public static final int iv_meeting=0x7f080004;
         public static final int textView1=0x7f08000d;
+        public static final int tv_checktype=0x7f08000f;
         public static final int tv_lastmeeting=0x7f080006;
         public static final int tv_meeting=0x7f080005;
         public static final int tv_noticedate=0x7f080011;
-        public static final int tv_noticename=0x7f08000f;
-        public static final int tv_noticroom=0x7f080010;
+        public static final int tv_noticename=0x7f080010;
         public static final int tv_username=0x7f08000c;
     }
     public static final class layout {
