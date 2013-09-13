@@ -1,5 +1,6 @@
 package com.antwei.meetingsys.fragments;
 
+import com.antwei.meetingsys.MeetingInfoActivity;
 import com.antwei.meetingsys.R;
 
 import android.app.Activity;
@@ -47,7 +48,8 @@ public class FragmentUserInfo extends Fragment implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 			Toast.makeText(context, "btnLogin be thouched", Toast.LENGTH_SHORT).show();
-			
+			intent = new Intent(activity, MeetingInfoActivity.class);
+			startActivity(intent);
 	}
 
 }

@@ -34,7 +34,8 @@
         android:layout_below="@id/et_pass"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="进入" />
+        android:text="登录"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn_quit"
@@ -43,6 +44,7 @@
         android:layout_below="@id/btn_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="退出" />
+        android:text="退出"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>

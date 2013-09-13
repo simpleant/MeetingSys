@@ -13,7 +13,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="会议通知"
+        android:text="会议信息"
         android:textColor="#ffffff"
         android:textSize="20sp" />
 

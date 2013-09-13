@@ -12,15 +12,15 @@
         android:id="@+id/tv_noticename"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#7fff0f00"
+        android:textColor="#ffffff"
         android:text="meeting" />
 
     <TextView
         android:id="@+id/tv_noticedate"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="#7fffffff"
-        android:gravity="right"
+        android:textColor="#ffffff"
+        android:gravity="left"
         android:text="2013/10/15 09:45" />
 
 </LinearLayout>
