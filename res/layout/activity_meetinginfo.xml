@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/wallpaper"
     android:orientation="horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -12,15 +12,26 @@
         android:id="@+id/fragment_meetingtost"
         android:name="com.antwei.meetingsys.fragments.FragmentMeetingDoc"
         android:layout_width="0dp"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:layout_weight="2" />
 
-    <fragment
-        android:id="@+id/fragment_lastMeeting"
-        android:name="com.antwei.meetingsys.fragments.FragmentMeetingInfo"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
         android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:layout_marginLeft="40dp"
-        android:layout_weight="4" />
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_weight="4"
+        android:background="#7f7f7f7f" >
+
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/pager_title_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="#33b5e5"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textColor="#fff" />
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>

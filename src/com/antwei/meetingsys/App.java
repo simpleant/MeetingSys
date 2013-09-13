@@ -1,11 +1,11 @@
 package com.antwei.meetingsys;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.WindowManager;
 
-public class App extends Activity {
+public class App extends FragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
