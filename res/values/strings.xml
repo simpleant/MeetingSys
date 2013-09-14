@@ -6,6 +6,20 @@
     <string name="hello_world">Hello world!</string>
     <string name="app_title">平板会议系统</string>
     <string name="notice">   针对组织机构内部无纸化会议的解决方案</string>
+    <string name="outline">会议简介内容, 这是会议内容简介\n这是会议内容简介\n这是会议内容简介\n
+        这是会议内容简介\n这是会议内容简介\n这是会议内容简介\n这是会议内容简介\n这是会议内容简介\n</string>
+    <string name="mamber">与会人员信息\n 四川省XXX\n，四川省XXX，四川省XXX，四川省XXX，四川省XXX，四川省XXX，
+            四川省XXX，四川省XXX，四川省XXX，四川省XXX，四川省XXX，四川省XXX，四川省XXX，四川省XXX\n四川省XXX\n四川省XXX\n
+            四川省XXX\n四川省XXX\n四川省XXX\n四川省XXX\n四川省XXX\n四川省XXX\n
+            四川省XXX\n四川省XXX\n四川省XXX\n四川省XXX\n四川省XXX\n四川省XXX\n四川省XXX\n
+            四川省XXX\n四川省XXX\n四川省XXX\n四川省XXX\n四川省XXX\n四川省XXX\n
+            四川省XXX，四川省XXX，四川省XXX，四川省XXX，</string>
+    <string name="schedule">会议日程信息\n yyMMdd yyMMdd yyMMdd yyMMdd yyMMdd yyMMdd 
+                yyMMdd yyMMdd yyMMdd yyMMdd yyMMdd yyMMdd yyMMdd 
+                yyMMdd yyMMdd </string>
+    <string name="rest">会议期间餐饮住宿\n 天赋大道XXX餐厅，天赋大道XXX餐厅，天赋大道XXX餐厅，天赋大道XXX餐厅，
+                    天赋大道XXX餐厅，天赋大道XXX餐厅，天赋大道XXX餐厅，天赋大道XXX餐厅，
+                    天赋大道XXX餐厅，天赋大道XXX餐厅，天赋大道XXX餐厅，</string>
     <string name="version">v1.0.1</string>
 
 </resources>
