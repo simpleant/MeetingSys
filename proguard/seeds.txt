@@ -87,6 +87,8 @@ com.antwei.meetingsys.R$drawable: int icon_lunch
 com.antwei.meetingsys.R$drawable: int user_checkin
 com.antwei.meetingsys.R$drawable: int user_uncheck
 com.antwei.meetingsys.R$drawable: int wallpaper
+com.antwei.meetingsys.R$drawable: int wallpaperflip
+com.antwei.meetingsys.R$drawable: int wallpapertree
 com.antwei.meetingsys.R$id: int action_settings
 com.antwei.meetingsys.R$id: int btn_login
 com.antwei.meetingsys.R$id: int btn_quit

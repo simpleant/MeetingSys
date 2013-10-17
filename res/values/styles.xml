@@ -18,7 +18,7 @@
     </style>
     
     <style name="MyTextColor">
-        <item name="android:textColor">#7f7f7f</item>
+        <item name="android:textColor">#cfffffff</item>
     </style>
     
     <style name="MyTextSize">
